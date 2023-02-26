@@ -4,9 +4,9 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "create-graph": "graph create --node http://localhost:8020/ biibot/hello",
-    "remove-graph": "graph remove --node http://localhost:8020/ biibot/hello",
-    "deploy-graph": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 biibot/hello"
+    "create-graph": "graph create --node https://deploy.api.biibot.com/meertest/ biibot/hello",
+    "remove-graph": "graph remove --node https://deploy.api.biibot.com/meertest/ biibot/hello",
+    "deploy-graph": "graph deploy --node https://deploy.api.biibot.com/meertest/ --ipfs https://ipfs.api.biibot.com biibot/hello"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.37.1",
