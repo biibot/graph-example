@@ -1,0 +1,27 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Donation
+    network: meer
+    source:
+      address: "0x1262851eFB7540617E38d32b3A4FF5B87F7FCC2b"
+      abi: Donation
+      startBlock: 349908
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Received
+        - SendToken
+      abis:
+        - name: Donation
+          file: ./abis/Donation.json
+      eventHandlers:
+        - event: Received(indexed address,uint256)
+          handler: handleReceived
+        - event: SendToken(indexed address,indexed uint256,string)
+          handler: handleSendToken
+      file: ./src/donation.ts
