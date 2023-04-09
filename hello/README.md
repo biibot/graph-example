@@ -8,6 +8,10 @@
 yarn
 ```
 
+```
+pnpm i
+```
+
 ### Generate types
 
 ```

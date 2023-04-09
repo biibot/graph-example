@@ -8,8 +8,14 @@
     "remove-graph": "graph remove --node https://deploy.api.biibot.com/meer/ biibot/wmeer",
     "deploy-graph": "graph deploy --node https://deploy.api.biibot.com/meer/ --ipfs https://ipfs.api.biibot.com biibot/wmeer"
   },
-  "dependencies": {
-    "@graphprotocol/graph-cli": "0.37.1",
-    "@graphprotocol/graph-ts": "0.28.1"
+  "dependencies": {},
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.45.0",
+    "@graphprotocol/graph-ts": "^0.29.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "ipfs-http-client@34.0.0>concat-stream": "github:mihirgupta0900/concat-stream#master"
+    }
   }
 }
